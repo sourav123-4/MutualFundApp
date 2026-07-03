@@ -84,9 +84,8 @@ src/
 
 ## Assumptions
 
-- Any valid email and non-empty password can log in because no authentication
-  API was requested.
-- MFapi.in is the source of truth for scheme and NAV data.
-- The investment action is a local simulation: it validates a whole-rupee
-  amount of at least Rs. 100 and does not persist or process a payment.
-- Search is case-insensitive and filters the fetched list by scheme name.
+- **Any valid email and non-empty password** can log in because no authentication API was requested.
+- **MFapi.in** is the source of truth for scheme and NAV data.
+- **The investment action** is a local simulation: it validates a whole-rupee amount of at least Rs. 100 and does not persist or process a payment.
+- **Search** is case-insensitive and filters the fetched list by scheme name.
+- **NAV History Pagination**: The third-party API (`MFapi.in`) does not support server-side pagination for a scheme's NAV history (it returns the entire dataset in a single JSON payload). To prevent performance degradation, the app uses a virtualized `FlatList` on the client side, which dynamically mounts and unmounts cells as they scroll into view.
