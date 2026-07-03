@@ -6,19 +6,20 @@ Android and iOS.
 
 ## Features
 
-- Demo login with field validation and a token stored in the native Keychain /
-  Android Keystore
-- Persistent login across app restarts
-- Searchable mutual fund scheme list with pull-to-refresh
-- NAV history for each scheme
-- Loading, empty, timeout, and network error states with retry actions
-- Simulated investment flow with a bottom sheet and minimum amount validation
+- **Keyboard-Aware ScrollView**: Integrated `react-native-keyboard-aware-scroll-view` for smooth, automatic scrolling of text inputs on focus.
+- **Top Toast/Tooltip Success Notification**: Integrated `react-native-toast-message` with customized large fonts and styling.
+- **Dynamic Sizing Normalization**: Built a scale normalization utility (`src/utils/normalize.ts`) to ensure responsive scaling of fonts, padding, margins, and sizes on all devices.
+- **Custom Inter Font Family**: Imported and natively linked the **Inter** font family (Regular, Medium, SemiBold, Bold, ExtraBold) using `react-native-asset`.
+- **Demo login** with field validation and a token stored in the native Keychain / Android Keystore
+- **Persistent login** across app restarts
+- **Searchable mutual fund scheme list** with pull-to-refresh
+- **NAV history** for each scheme
+- **Loading, empty, timeout, and network error states** with retry actions
+- **Simulated investment flow** with a bottom sheet and minimum amount validation
 
 ## Login
 
-Authentication is intentionally local for this assignment. Enter any valid
-email address and any non-empty password. After validation, a dummy token is
-written to secure native storage and restored when the app restarts.
+Authentication is intentionally local for this assignment. Enter **any valid email address** (e.g. `user@example.com`) and **any non-empty password** (e.g. `password`). After validation, a dummy token is written to secure native storage and restored when the app restarts.
 
 ## Run locally
 
